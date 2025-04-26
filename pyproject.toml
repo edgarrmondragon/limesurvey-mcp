@@ -1,0 +1,10 @@
+[project]
+name = "mcp-limesurvey"
+version = "0.0.1"
+description = "An MCP server for LimeSurvey"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "citric>=1.4.0",
+    "fastmcp>=2.2.4",
+]
