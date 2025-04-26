@@ -313,15 +313,27 @@ def save_responses(sid: int, data: dict[str, Any]) -> bool:
 
 
 @mcp.tool()
-def export_responses(sid: int, file_format: str = "csv") -> str:
+def export_responses(
+    sid: int,
+    file_format: str = "csv",
+    language: str | None = None,
+    heading_type: str = "code",
+) -> str:
     """Export responses from a LimeSurvey survey.
 
     Args:
         sid: The survey ID.
         file_format: The format to export (csv, json, etc).
+        language: The language to export (en, es, etc).
+        heading_type: The type of heading to export (code, full, abbreviated).
     """
     with get_client() as client:
-        return client.export_responses(sid, file_format=file_format).decode("utf-8")
+        return client.export_responses(
+            sid,
+            file_format=file_format,
+            language=language,
+            heading_type=heading_type,
+        ).decode("utf-8")
 
 
 @mcp.tool()
@@ -333,7 +345,7 @@ def export_statistics(sid: int, document_type: str = "pdf") -> str:
         document_type: The document type (pdf, xls, html).
     """
     with get_client() as client:
-        return client.export_statistics(sid, document_type)
+        return client.export_statistics(sid, file_format=document_type)
 
 
 @mcp.tool()
