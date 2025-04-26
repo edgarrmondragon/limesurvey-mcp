@@ -16,10 +16,14 @@ This is an MCP server for LimeSurvey. It is a simple server that allows you to m
 {
   "mcpServers": {
     "limesurvey-mcp": {
-      "command": "/Users/<YOUR USERNAME>/.limesurvey-mcp/.venv/bin/mcp",
+      // For example, /Users/<YOUR USERNAME>/.local/bin/uv
+      "command": "/path/to/uv",
       "args": [
+        "--directory",
+        // For example, /Users/<YOUR USERNAME>/mcp-servers/limesurvey-mcp
+        "/path/to/limesurvey-mcp",
         "run",
-        "/Users/<YOUR USERNAME>/.limesurvey-mcp/.venv/lib/python3.12/site-packages/limesurvey_mcp/main.py"
+        "main.py"
       ],
       "env": {
         // see config above
