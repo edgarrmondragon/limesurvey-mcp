@@ -2,6 +2,10 @@
 
 This is an MCP server for LimeSurvey. It is a simple server that allows you to manage your LimeSurvey surveys and responses.
 
+<a href="https://glama.ai/mcp/servers/@edgarrmondragon/limesurvey-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@edgarrmondragon/limesurvey-mcp/badge" alt="LimeSurvey Server MCP server" />
+</a>
+
 ## Configuration
 
 | Name | Description |
