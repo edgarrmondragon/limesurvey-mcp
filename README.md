@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/edgarrmondragon-limesurvey-mcp-badge.png)](https://mseep.ai/app/edgarrmondragon-limesurvey-mcp)
+
 # LimeSurvey MCP Server
 
 This is an MCP server for LimeSurvey. It is a simple server that allows you to manage your LimeSurvey surveys and responses.
