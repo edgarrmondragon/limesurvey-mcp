@@ -1,5 +1,3 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/edgarrmondragon-limesurvey-mcp-badge.png)](https://mseep.ai/app/edgarrmondragon-limesurvey-mcp)
-
 # LimeSurvey MCP Server
 
 This is an MCP server for LimeSurvey. It is a simple server that allows you to manage your LimeSurvey surveys and responses.
@@ -7,6 +5,8 @@ This is an MCP server for LimeSurvey. It is a simple server that allows you to m
 <a href="https://glama.ai/mcp/servers/@edgarrmondragon/limesurvey-mcp">
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@edgarrmondragon/limesurvey-mcp/badge" alt="LimeSurvey Server MCP server" />
 </a>
+
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/edgarrmondragon-limesurvey-mcp-badge.png)](https://mseep.ai/app/edgarrmondragon-limesurvey-mcp)
 
 ## Configuration
 
