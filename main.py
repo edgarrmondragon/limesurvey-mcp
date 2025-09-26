@@ -369,7 +369,7 @@ def add_survey(survey_data: dict[str, Any]) -> int:
         survey_data: The survey data.
     """
     with get_client() as client:
-        return client.add_survey(survey_data)
+        return client.add_survey(**survey_data)
 
 
 @mcp.tool()
