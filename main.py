@@ -691,5 +691,22 @@ def download_files(sid: int, file_id: int = None) -> dict[str, Any]:
         return client.download_files(sid, file_id)
 
 
+# Prompts
+@mcp.prompt()
+def summarize_survey_statistics_and_timeline(sid: int, days_back: int = 30) -> str:
+    """Summarize survey statistics and submission timeline for analysis.
+
+    Args:
+        sid: The survey ID to analyze.
+        days_back: Number of days back from today to analyze. Defaults to 30.
+
+    Returns:
+        A concise summary of survey statistics and timeline data.
+    """
+    return f"""For survey {sid}:
+1. Call the limesurvey-mcp:export_timeline tool with a period of 'day' and start_date of {days_back} days ago to gather survey submission timeline data.
+2. Call the limesurvey-mcp:export_statistics tool with file_format 'html' to gather survey statistics.
+3. Provide a concise summary. Simply state facts, do not draw any conclusions."""
+
 if __name__ == "__main__":
     mcp.run()
