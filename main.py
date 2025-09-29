@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from datetime import datetime
 from typing import Any
 
 from citric import Client
@@ -349,16 +350,19 @@ def export_statistics(sid: int, document_type: str = "pdf") -> str:
 
 
 @mcp.tool()
-def export_timeline(sid: int, start_date: str = None, end_date: str = None) -> str:
+def export_timeline(sid: int, period: str, start_datetime: str, end_datetime: str = None) -> str:
     """Export timeline for a LimeSurvey survey.
 
     Args:
         sid: The survey ID.
-        start_date: The start date (YYYY-MM-DD).
-        end_date: The end date (YYYY-MM-DD).
+        period: The granularity level for aggregation submission counts ('day' or 'hour').
+        start_date: The start datetime (YYYY-MM-DDTHH:MM:SS) in any valid ISO 8601 format.
+        end_date: The end datetime (YYYY-MM-DDTHH:MM:SS) in any valid ISO 8601 format.
     """
     with get_client() as client:
-        return client.export_timeline(sid, start_date, end_date)
+        start_dt = datetime.fromisoformat(start_datetime)
+        end_dt = datetime.fromisoformat(end_datetime) if end_datetime else None
+        return client.export_timeline(sid, period, start_dt, end_dt)
 
 
 @mcp.tool()
